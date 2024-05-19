@@ -1,0 +1,245 @@
+body {
+  font-family: 'Raleway', 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #000000;
+  color: #f48404;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  background-color: #343a40;
+  color: white;
+  padding: 10px 0;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .logo {
+  margin-left: 20px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #f48404;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+
+nav ul li {
+  margin: 0 20px;
+  position: relative;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 20px;
+  display: inline-block;
+  transition: color 0.3s, background-color 0.3s;
+  border-radius: 5px;
+}
+
+nav ul li a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  z-index: -1;
+  transition: transform 0.3s;
+  transform: scaleX(0);
+  transform-origin: left;
+  border-radius: 5px;
+}
+
+nav ul li a:hover::before {
+  transform: scaleX(1);
+}
+
+nav ul li a:hover {
+  color: #343a40;
+  background-color: #f48404;
+}
+
+.hero {
+  background-color: #1a1a1a;
+  padding: 100px 20px;
+  margin-top: 60px;
+  display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
+}
+
+.hero-content {
+  text-align: center;
+  margin-right: 20px; /* Add space between content and image */
+}
+
+.hero h1 {
+  color: #f48404;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.hero p {
+  color: #b3b3b3;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.cta-button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #f48404;
+  border: none;
+  border-radius: 5px;
+  color: #000000;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #f48404;
+}
+
+.hero-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+section {
+  padding: 100px 20px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+#about, #services, #contact {
+  background-color: #1a1a1a;
+}
+
+h2 {
+  text-align: center;
+  color: #f48404;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+p {
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+  color: #b3b3b3;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.feature {
+  background-color: #262626;
+  padding: 20px;
+  border-radius: 5px;
+  width: 30%;
+  text-align: center;
+}
+
+.feature h3 {
+  color: #f48404;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.feature p {
+  color: #b3b3b3;
+}
+
+footer {
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-nav li {
+  margin: 0 10px;
+}
+
+.footer-nav li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer-nav li a:hover {
+  color: #f48404;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .hero-content {
+    margin-bottom: 40px;
+  }
+
+  section {
+    padding: 60px 20px;
+  }
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+}
